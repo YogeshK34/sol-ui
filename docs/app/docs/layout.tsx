@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
-import "react-native-web/dist"
+
 
 import { getPageMap } from "nextra/page-map";
 import { Navbar as NavbarNextra, Layout } from "nextra-theme-docs";
@@ -37,11 +37,14 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Layout
-  
-        pageMap={await getPageMap()}>
+ 
+        pageMap={await getPageMap()}
+        >
 
     
-        {children}
+       
+         {children}
+   
         
         </Layout>
       </body>

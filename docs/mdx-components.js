@@ -4,7 +4,7 @@ const themeComponents = getTheme()
 
 export function useMDXComponents(components){
     return{
-        ...themeComponents,
+        // ...themeComponents,
         ...components
 }
 }

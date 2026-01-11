@@ -4,6 +4,7 @@ import "./globals.css";
 import "react-native-web/dist"
 import Navbar from "@/src/components/ui/navbar";
 import Footer from "@/src/components/ui/footer";
+import { RootProvider } from "fumadocs-ui/provider/next";
 
 
 
@@ -36,9 +37,11 @@ export default async function RootLayout({
         
     
 
+        <RootProvider>
         <Navbar/>
-        {children}
+          {children}
         <Footer />
+        </RootProvider>
 
       </body>
     </html>

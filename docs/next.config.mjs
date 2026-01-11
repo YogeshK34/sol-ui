@@ -1,15 +1,18 @@
-
-import nextra from 'nextra';
-
-const withNextra = nextra({
-    contentDirBasePath: '/docs'
-});
+import { createMDX } from "fumadocs-mdx/next";
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    /* config options here */
-    // devIndicators: { buildActivity: false },
-
+const config = {
+ // configs
 };
 
-export default withNextra(nextConfig);
+const withMDX = createMDX({
+  // customise the config file path
+  // configPath: "source.config.ts"
+
+   webpack: (config) => {
+    config.resolve.alias['fumadocs-mdx:collections'] = './.source';
+    return config;
+  }
+});
+
+export default withMDX(config);

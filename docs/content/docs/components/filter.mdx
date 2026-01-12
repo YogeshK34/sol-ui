@@ -1,0 +1,166 @@
+---
+title: Filter
+description: A component to filter out things.
+---
+
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+import { Step, Steps } from "fumadocs-ui/components/steps";
+import { ComponentPreview } from "@/src/components/ui/component-preview";
+import { SourceCode } from "@/src/components/ui/source-code";
+
+<Tabs items={["Preview", "Code"]}>
+  <Tab value="Preview">
+    <ComponentPreview>
+     <iframe
+                            src="https://sol-ui-krma.vercel.app/ButtonDemo"
+                            width={200}
+                            height={200}
+                            className='col-span-1'
+                        />
+    </ComponentPreview>
+  </Tab>
+  <Tab value="Code">
+  <SourceCode content={
+    
+    `
+import React, { useState } from "react";
+import { Pressable, View, Text } from "react-native";
+import AntDesign from 'react-native-vector-icons/AntDesign'
+
+type FilterButtons = {
+    icon?: React.ReactNode;
+    label: string;
+}
+
+type AddFilters = {
+    icon?: React.ReactNode;
+    label: string
+
+}
+
+interface FilterProps {
+    filterButtons: FilterButtons[];
+    addFilters: AddFilters[]
+}
+
+
+export function Filter({ filterButtons, addFilters }: FilterProps) {
+    const [filter, setFilter] = useState(false)
+    return (
+        <View className="h-40 w-80 shadow-md rounded-xl m-10 border ">
+            < Text className="p-4 font-bold flex items-center">
+                Apply filter
+                <AntDesign name="filter" size={15} />
+            </Text>
+            <View className="flex flex-row gap-2 m-2">
+                {
+                    filterButtons.map((el, id) => (
+                        <FilterButton key={id} label={el.label} icon={el.icon} />
+                    ))
+                }
+                <View className="">
+                    <Pressable onPress={() => setFilter((prev) => !prev)} className={'bg-red-300 size-8 flex items-center justify-center rounded-md'}
+                    >
+                        <Text className="m-auto">
+                            {
+                                filter ? 'X' : '+'
+                            }
+                        </Text>
+                    </Pressable>
+                    {addFilters.length > 0 && filter && <View className="shadow-md bg-white min-w-28 absolute left-10 top-2 rounded-md p-1">
+                        {
+                            addFilters.map((el, id) => (
+                                <AddFilter key={id} label={el.label} />
+                            ))
+                        }
+                    </View>}
+                </View>
+            </View>
+        </View>
+    )
+}
+
+
+export const FilterButton = ({ label, icon }: FilterButtons) => {
+    return (
+        <Pressable className="bg-violet-300/40  py-2 px-3 rounded-md h-fit ">
+            <Text className="flex items-center gap-1 mx-auto"
+            ><Text>
+                    {icon}
+                </Text>{label}</Text>
+        </Pressable>
+    )
+}
+
+export const AddFilter = ({ label, icon }: AddFilters) => {
+    return (
+        <View className="flex flex-row items-center gap-1 justify-between active:bg-violet-300/30 p-2 rounded-md">
+            <Text>
+                {
+                    icon
+                }
+            </Text>
+            <Text className=" ">
+                {
+                    label
+                }
+            </Text>
+            <Pressable className=""><Text>+</Text></Pressable>
+        </View>
+    )
+}
+    `
+     
+  }/>
+  </Tab>
+</Tabs>
+
+
+## Installation
+
+<Tabs items={['CLI', 'Manual']}>
+  <Tab value="CLI">
+    ```bash
+    npx shadcn@latest add "https://uselayouts.com/r/bottom-menu.json"
+    ```
+  </Tab>
+  <Tab value="Manual">
+    <Steps>
+      <Step>
+        ### Install dependencies
+
+        ```bash
+        npm install nativewind react-native-vector-icons
+        ```
+      </Step>
+      <Step>
+        ### Copy the code
+
+        Copy the code from the **Code** tab above into `components/ui/pop-card.tsx`.
+      </Step>
+      <Step>
+        ### Update imports
+
+        Update the imports to match your project structure.
+      </Step>
+    </Steps>
+
+  </Tab>
+</Tabs>
+
+
+## Usage
+
+
+```tsx
+import { Filter } from "@components/ui/filter";
+
+
+export default function FilterDemo() {
+    return
+          <Filter 
+          filterButtons={[{label: 'abc'} , {label: 'abc'}]} 
+          addFilters={[{label: "abc"} , {label:"abc"} , {label: "abc"} , {label:"abc"}]}
+          />
+}
+```

@@ -1,8 +1,8 @@
+"use client"
 import Image from "next/image";
 // import BottomToolbar from "@expo/app/components/BottomToolbar";
 
 
-"use client"
 // import { Button } from '@/components/ui/button'
 
 
@@ -15,11 +15,10 @@ import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils/cn";
 import Hero from "@/src/sections/hero";
 import AnimationThemeComponent from "@/src/sections/animation-theme-component";
-import CardAnimate from "@/src/components/ui/card-animate";
-import { ComponentPreview } from "@/src/components/docs/component-preview";
-import { ComponentContainer } from "@/src/components/docs/component-container";
-import ComponentShow from "@/src/sections/component-show";
-
+// import CardAnimate from "@/src/components/ui/card-animate";
+// import { ComponentPreview } from "@/src/components/docs/component-preview";
+// import { ComponentContainer } from "@/src/components/docs/component-container";
+// import ComponentShow from "@/src/sections/component-show";
 
 
 
@@ -88,6 +87,9 @@ export default function Home() {
         <Hero />
       </div>
 
+      
+
+     
 
 
       {/* <div className="min-h-screen mx-auto flex items-center justify-center ">
@@ -100,24 +102,17 @@ export default function Home() {
             </div> */}
 
 
-      <div className="min-h-svh"></div>
+      <div className="min-h-50"></div>
+
       <AnimationThemeComponent />
 
-      <div className="min-h-40">
+      <div className="min-h-50">
 
       </div>
 
 
-
-<ComponentShow/>
-
-
-     {/* card animate android screens page */}
-    <div className="min-h-screen mt-60">
-        <CardAnimate />
-    </div> 
-
-      {/*  end card animate page */}
+{/* 
+      <ComponentShow /> */}
 
     </>
   );

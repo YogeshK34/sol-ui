@@ -52,5 +52,15 @@
                 "target": "components/ui"
             }
         ]
+    },
+    {
+        "name": "badge",
+        "files": [
+            {
+                "path": "components/badge.tsx",
+                "target": "components/ui"
+            }
+        ]
     }
+   
 ]

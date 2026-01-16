@@ -23,10 +23,10 @@ function AnimationThemeComponent() {
     <div className="min-h-screen">
       <div className="py-5">
         <div className="  py-0.5  rounded-[5px]  flex items-center mx-20 gap-2">
-          <motion.button className="dark:bg-neutral-100 py-2 px-3 rounded-md ring-1 dark:ring-black/30 ring-neutral-500 cursor-pointer ">
+          <motion.button className=" py-2 px-3 rounded-md ring-1 ring-black/30 dark:ring-neutral-500 cursor-pointer text-black dark:text-white">
             Checkout Some UI
           </motion.button>
-          <motion.button className="dark:bg-neutral-100 py-2 px-3 rounded-md ring-1 dark:ring-black/30 ring-neutral-500 cursor-pointer ">
+          <motion.button className=" py-2 px-3 rounded-md ring-1 ring-black/30 dark:ring-neutral-500 cursor-pointer  text-black dark:text-white">
             Open with Heart
           </motion.button>
         </div>

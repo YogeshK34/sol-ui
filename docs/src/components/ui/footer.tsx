@@ -111,7 +111,7 @@ export const BottomFooter = () => {
             {
                 [{ label: "2026", href: "/" }, { label: "sol-auth", href: "https://github.com/satish-solera/sol-auth" }].map((el, id) => {
                     return (
-                        <Link href={el.href}>
+                        <Link href={el.href} key={id}>
                             <button className='shadow ring-1 ring-neutral-500 py-0.5 px-3 rounded-[5px] cursor-pointer' key={`id-${id}`}
                             >
                                 {

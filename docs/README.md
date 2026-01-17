@@ -29,11 +29,13 @@ Ready to build something beautiful? Head over to the Installation guide.
 1. Prerequisites
 Our components are built on Android stack. Make sure your project is running:
 
+
 text
 Expo / React Native (Recommended)
 Nativewind CSS
 2. Install Dependencies
 Most components rely on nativewind for CSS and react-native-vector-icons for icons:
+
 
 bash
 npm install nativewind react-native-vector-icons

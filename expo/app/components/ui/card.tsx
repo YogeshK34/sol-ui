@@ -15,7 +15,7 @@ export const CardHeader = () => {
     return (
         <View className="w-full h-16 bg-black/5 overflow-hidden border-b border-neutral-300">
             <Text className="text-2xl font-medium m-5">
-                hi
+                sol-auth
             </Text>
         </View>
     )
@@ -25,7 +25,7 @@ export const CardBody = () =>{
     return(
         <View className="m-5 ">
             <Text className="text-neutral-500">
-                hiiii abb Lorem ipsum dolor sit amet.
+                sol-auth is an opne source project.
             </Text>
         </View>
     )
@@ -35,8 +35,9 @@ export const CardButton = () =>{
     return(
         <Pressable className="py-1 px-3  border border-neutral-200 rounded-md m-5 mb-0 w-20">
             <Text className="text-center">
-                hi
+                authentication
             </Text>
         </Pressable>
     )
+
 }

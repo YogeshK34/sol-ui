@@ -7,65 +7,51 @@
 </p>
 
 
+#  solUI
 
-solUI
-solUI is a collection of layout components designed to make your mobile apps feel alive.
-Instead of fighting with boilerplate, you can copy and paste these components directly into your project. We've focused on the "hard parts"—the coordination of responsive layouts, and the subtle details that make a UI feel premium.
+![solUI Banner](./public/solUI-banner.png)
 
+A premium collection of modern and interactive UI components for react native applications. Built with Nativewind CSS. 
 
+## Features
 
-Why solUI?
-solUI aims to inject some playfulness and "wow" factor back into mobile apps. We re-create high-end patterns found on award-winning mobile screens and package them into readable, copy-pasteable blocks that you can truly own.
+- **Premium Design**: Carefully crafted components with a focus on aesthetics and user experience.
+- **Copy & Paste**: Designed to be easily integrated into your existing projects.
+- **Fully Customizable**: Flexible components that adapt to your design system.
 
-Built for Speed: Copy the code, paste it, and you're done. No heavy library wrappers.
+## Getting Started
 
-Full Control: Since the code lives in your project, you have total control over every animation and style.
+### Installation
 
-Why solUI? →
+1. Clone the repository:
 
-Getting Started
-Ready to build something beautiful? Head over to the Installation guide.
+```bash
+git clone https://github.com/satish-solera/sol-ui.git
+```
 
-1. Prerequisites
-Our components are built on Android stack. Make sure your project is running:
+2. Install dependencies:
 
+```bash
+npm install
+```
 
-text
-Expo / React Native (Recommended)
-Nativewind CSS
-2. Install Dependencies
-Most components rely on nativewind for CSS and react-native-vector-icons for icons:
+3. Run the development server:
 
+```bash
+npm run dev
+```
 
-bash
-npm install nativewind react-native-vector-icons
-3. Add a Component
-That's it! You're ready to go.
+## Contributing
 
-Browse the Components
+We welcome contributions from the community. Please read our [Contribution Guidelines](CONTRIBUTING.md) to get started.
 
-Click on the component you want to use
+## Support the Project
 
-Copy the source code or install via sol CLI
+If you find solUI helpful, please consider giving it a star. 
 
-Need help? Open an issue on GitHub.
+## License
 
-
-🤝 Contributing
-Fork the repo
-
-Create your feature branch (git checkout -b feature/amazing-component)
-
-Commit changes (git commit -m 'Add amazing component')
-
-Push to branch (git push origin feature/amazing-component)
-
-Open Pull Request
-
-📄 License
-MIT
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project is licensed under the MIT License.
 
 # buymeacoffee
 

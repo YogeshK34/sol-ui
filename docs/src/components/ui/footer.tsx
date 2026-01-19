@@ -75,8 +75,8 @@ export const ScheduleCall = () => {
                 <div className='size-2 dark:bg-white bg-black rounded-full'></div>  Schedule a Call
             </button>
             <p className='text-black dark:text-white py-3'>
-                <b>Have a Project ? </b>
-                <p className='text-neutral-400'>we  would love to hear from you</p>
+                <b>Have a Project ? </b> <br />
+                <span className='text-neutral-400'>we  would love to hear from you</span>
             </p>
             <Link  href="https://cal.com/satish-solera-vcuclh/15min">
             <motion.button

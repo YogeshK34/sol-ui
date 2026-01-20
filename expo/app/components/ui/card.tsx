@@ -40,7 +40,7 @@ export const CardButton = ({children, onPress} : {children : React.ReactNode, on
     return(
         <Pressable 
             onPress={onPress}
-            className="py-1 px-3  border border-neutral-200 rounded-md m-5 mb-0 min-w-20 active:bg-neutral-100"
+            className="py-1 px-3  border border-neutral-200 rounded-md m-5 mb-5 min-w-20 active:bg-neutral-100"
         >
             <Text className="text-center font-semibold">
                 {

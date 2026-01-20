@@ -19,9 +19,13 @@ const demoUrl = [
     demoUrl: "https://sol-ui-krma.vercel.app/demo/ProfileCardDemo",
   },
   {
+    docsUrl: "/docs/card",
+    demoUrl: "https://sol-ui-krma.vercel.app/demo/CardDemo",
+  },
+  {
     docsUrl: "/docs/filter",
     demoUrl: "https://sol-ui-krma.vercel.app/demo/FilterDemo",
-    className: "md:col-span-2"
+    className: " h-[400px] md:col-span-2"
   },
 ];
 function AnimationThemeComponent() {
@@ -50,7 +54,7 @@ export default AnimationThemeComponent;
 
 export const ComponentCard = ({ demoSrc , className}: { demoSrc: string , className ?: string}) => {
   return (
-      <div className={cn("h-96 w-full flex items-center justify-center" , className)}>
+      <div className={cn("h-[600px] w-full flex items-center justify-center" , className)}>
         <iframe
           src={demoSrc}
           className={cn(" h-full w-full flex items-center justify-center m-auto  rounded-[15px] p-0.5 ring-1 ring-black/10" )}

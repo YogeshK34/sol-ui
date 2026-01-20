@@ -79,6 +79,15 @@
                 "target": "components/ui"
             }
         ]
+    },
+    {
+        "name": "card",
+        "files": [
+            {
+                "path": "components/card.tsx",
+                "target": "components/ui"
+            }
+        ]
     }
    
 ]

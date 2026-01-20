@@ -88,7 +88,7 @@ export function Filter({ filterButtons, addFilters }: FilterProps) {
                 {
                     selectedButtonFilters.map((el, id) => (
                         <FilterButton 
-                            key={`button-${id}`} 
+                            key={\`button\-\$\{id}\`} 
                             label={el.label} 
                             icon={el.icon} 
                             onRemove={() => handleRemoveButtonFilter(id)}
@@ -98,7 +98,7 @@ export function Filter({ filterButtons, addFilters }: FilterProps) {
                 {
                     selectedFilters.map((el, id) => (
                         <FilterButton 
-                            key={`selected-${id}`} 
+                            key={\`selected\-\$\{id}\`} 
                             label={el.label} 
                             icon={el.icon} 
                             onRemove={() => handleRemoveFilter(id)}
@@ -107,9 +107,9 @@ export function Filter({ filterButtons, addFilters }: FilterProps) {
                 }
 
                 <View className="">
-                    <Pressable onPress={() => setFilter((prev) => !prev)} className={`bg-black text-white size-8 flex items-center justify-center rounded-md '
-                        ${filter ? "bg-black/80" : "bg-black "}
-                    `}
+                    <Pressable onPress={() => setFilter((prev) => !prev)} className={\`bg-black text-white size-8 flex items-center justify-center rounded-md '
+                        \${filter ? "bg-black/80" : "bg-black "}
+                    \`}
                     >
                         <Text className="m-auto text-white">
                             {

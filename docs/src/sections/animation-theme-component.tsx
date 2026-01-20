@@ -1,28 +1,34 @@
 "use client";
 
+
 import { cn } from "@/lib/utils/cn";
 import { motion } from "motion/react";
-import React, { useState } from "react";
 
 const demoUrl = [
   {
-    url: "https://sol-ui-krma.vercel.app/ButtonDemo",
+
+    docsUrl: "/docs/button",
+    demoUrl: "https://sol-ui-krma.vercel.app/demo/ButtonDemo",
   },
   {
-    url: "https://sol-ui-krma.vercel.app/InfoBadgeDemo",
+    docsUrl: "/docs/discrete-tabs",
+    demoUrl: "https://sol-ui-krma.vercel.app/demo/DiscreteTabsDemo",
   },
   {
-    url: "https://sol-ui-krma.vercel.app/ProfileCardDemo",
+    docsUrl: "/docs/profile",
+    demoUrl: "https://sol-ui-krma.vercel.app/demo/ProfileCardDemo",
   },
   {
-    url: "https://sol-ui-krma.vercel.app/FilterDemo",
+    docsUrl: "/docs/filter",
+    demoUrl: "https://sol-ui-krma.vercel.app/demo/FilterDemo",
+    className: "col-span-2"
   },
 ];
 function AnimationThemeComponent() {
   return (
     <div className="min-h-screen">
       <div className="py-5">
-        <div className="  py-0.5  rounded-[5px]  flex items-center mx-20 gap-2">
+        <div className="  py-0.5  rounded-[5px]  flex items-center mx-2 sm:mx-20 gap-2">
           <motion.button className=" py-2 px-3 rounded-md ring-1 ring-black/30 dark:ring-neutral-500 cursor-pointer text-black dark:text-white">
             Checkout Some UI
           </motion.button>
@@ -31,9 +37,9 @@ function AnimationThemeComponent() {
           </motion.button>
         </div>
       </div>
-      <div className="grid  grid-cols-2 md:grid-cols-4 gap-1 mx-0.5">
+      <div className="grid  grid-cols-1 md:grid-cols-4 gap-1 mx-auto">
         {demoUrl.map((el, id) => {
-          return <ComponentCard src={el.url} key={id} />;
+          return <ComponentCard demoSrc={el.demoUrl} key={id} className={el.className} />
         })}
       </div>
     </div>
@@ -42,13 +48,13 @@ function AnimationThemeComponent() {
 
 export default AnimationThemeComponent;
 
-export const ComponentCard = ({ src }: { src: string }) => {
+export const ComponentCard = ({ demoSrc , className}: { demoSrc: string , className ?: string}) => {
   return (
-    <div className="h-96 w-full  flex items-center justify-center">
-      <iframe
-        src={src}
-        className="  h-full w-full flex items-center justify-center m-auto  rounded-[15px] p-0.5 ring-1 ring-black/10"
-      ></iframe>
-    </div>
+      <div className={cn("h-96 w-full flex items-center justify-center" , className)}>
+        <iframe
+          src={demoSrc}
+          className={cn(" h-full w-full flex items-center justify-center m-auto  rounded-[15px] p-0.5 ring-1 ring-black/10" )}
+        ></iframe>
+      </div>
   );
 };

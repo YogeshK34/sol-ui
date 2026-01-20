@@ -1,15 +1,13 @@
 
 <p align="center">
   <!-- Repo stats -->
-  <img src="https://img.shields.io/github/stars/satish-solera/sol-ui?style=social" />
-  <img src="https://img.shields.io/github/forks/satish-solera/sol-ui?style=social" />
-  <img src="https://img.shields.io/github/issues/satish-solera/sol-ui?style=social" />
+  <img src="https://img.shields.io/github/stars/satish-solera/sol-ui" />
+  <img src="https://img.shields.io/github/forks/satish-solera/sol-ui" />
+  <img src="https://img.shields.io/github/issues/satish-solera/sol-ui" />
 </p>
 
 
 #  solUI
-
-![solUI Banner](./public/solUI-banner.png)
 
 A premium collection of modern and interactive UI components for react native applications. Built with Nativewind CSS. 
 

@@ -3,6 +3,7 @@
 import * as React from "react";
 import { Pressable, Text, View, Image } from "react-native";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
+import { Dropdown } from "./dropdown";
 
 const ItemData = [
     {
@@ -17,13 +18,23 @@ const ItemData = [
 ]
 
 
+type ItemsProps = {
+    price : number;
+    itemName: string;
+    sizeOptions : string[];
+    colorOptions : string[];
+    compositionOptions: string[];
+}
 
-export default () => {
-    let price = 300;
-    let itemName = "praso printed"
+
+export default ({price , itemName , sizeOptions , colorOptions , compositionOptions} : ItemsProps) => {
     const [liked, setLiked] = React.useState<boolean | undefined>(false);
     const [image, setImage] = React.useState<string | undefined>(ItemData[1].imgSrc)
 
+    const [size , setSize] = React.useState<string>("Large");
+    const [color , setColor] = React.useState<string>("Green");
+    const [composition , setComposition] = React.useState("Silk Bamboo");
+    const [quantity , setQuantity] = React.useState<number>(1);
 
     return (
         <View className="relative w-full h-full">
@@ -72,43 +83,62 @@ export default () => {
                         {`$ ${price}`}
                     </Text>
                 </View>
-
                 {/* item details */}
-                <View className="w-64 h-fit py-5 bg-cyan-400">
-                    <View className="flex flex-row gap-5 items-center ">
-                        <Pressable>
-                            <Text>
-                                Large
-                            </Text>
-                        </Pressable>
-                        <Pressable>
-                            <Text>
-                                01
-                            </Text>
-                        </Pressable>
+                <View className="w-80 h-fit pt-5 mx-5 ">
+                    <View className="flex flex-row gap-5 items-center my-2">
+                        <Dropdown 
+                        label="Size"
+                        value={size}
+                        options={sizeOptions}
+                        onSelect={setSize}
+                        />
+                        <Dropdown 
+                        label="Color"
+                        value={color}
+                        options={colorOptions}
+                        onSelect={setColor}
+                        />
                     </View>
 
-                    <View className="flex flex-row gap-5 items-center ">
-                        <Pressable>
+                    <View className=" flex flex-row gap-5 items-center  ">
+                       <Dropdown 
+                        label="Compostion"
+                        value={composition}
+                        options={compositionOptions}
+                        onSelect={setComposition}
+                        />
+                        <Pressable className="flex flex-row gap-2 items-center justify-center border border-black/20 px-4 py-2 rounded-md mt-5">
+                            <Pressable
+                            className="size-6 "
+                            onPress={()=>{
+                                 if(quantity > 1){
+                                     setQuantity(quantity -1)
+                                    }  
+                                 }}>
+                                <Text>
+                                    -
+                                </Text>
+                            </Pressable>
+                           <Text className="text-center">
+                            {
+                                quantity
+                            }
+                           </Text>
+                           <Pressable 
+                           className="size-6 "
+                           onPress={()=>  setQuantity(quantity  + 1)}>
                             <Text>
-
-                                collor
+                                +
                             </Text>
-                        </Pressable>
-                        <Pressable>
-                            <Text>
-
-                                silk bamboo
-                            </Text>
+                           </Pressable>
                         </Pressable>
                     </View>
                 </View>
 
                 {/* add to cart button */}
-                <Pressable className="absolute right-10 bottom-20 w-20 bg-green-300 h-24 rounded-lg">
+                <Pressable className="absolute right-10 bottom-20 w-20 border border-black/20 h-24 rounded-lg active:scale-105 ">
                     <Text className=" text-black text-center text-2xl font-medium m-auto">
-                        + Add
-                        <FontAwesome name="heart" size={18} color={liked ? "red" : "black"} />
+                      Buy
                     </Text>
                 </Pressable>
             </View>

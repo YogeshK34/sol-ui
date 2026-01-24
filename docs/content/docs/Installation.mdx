@@ -3,18 +3,34 @@ title: Installation
 description: How to get started with solUI in your project.
 ---
 
-Getting started with **solUI**.
+import { PackageManagers } from "@/src/components/docs/package-manager";
 
-## 1. Prerequisites
 
-Our components are built on a Android stack. Make sure your project is running:
 
+# Installation
 
 - **Expo / React Native** (Recommended)
 - **Nativewind CSS**
 
+## Automatic Installation
 
-## 2. Install Dependencies
+Using the CLI is now the easiest way to start a solUI project. You can initialize your project and add components directly via the CLI:
+
+### Installation 
+Execute one of the following commands in your terminal:
+```bash
+ npm install -g solui
+```
+
+<PackageManagers
+  commands={{
+    npm: "npm install -g solui",
+    yarn: "yarn global add solui",
+    pnpm: "pnpm add -g solui",
+    bun: "bun add -g solui",
+  }}
+/>
+
 
 Most components rely on `nativewind` for CSS and `react-native-vector-icons` for a Icons Library. Run the following command in your terminal:
 
@@ -22,10 +38,22 @@ Most components rely on `nativewind` for CSS and `react-native-vector-icons` for
 npm install nativewind react-native-vector-icons
 ```
 
+## start server
 
-## 3. Add a Component
+Install the dependencies to start the local server:
+```
+npm: "npm run dev",
+```
 
-That's it! You're ready to go.
+
+### Adding the Components
+Once your solUI project is ready to develop, you can add individual components using the CLI. For example, to add a button component:
+
+```bash
+solui add button
+```
+
+
 
 1. Browse the [Components](/docs/components/badge).
 2. Click on the component you want to use.

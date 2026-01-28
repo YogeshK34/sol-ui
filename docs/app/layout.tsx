@@ -40,6 +40,15 @@ export const metadata: Metadata = {
     "UI Framework",
     "UI Design System",
   ],
+  twitter: siteConfig.twitter,
+  openGraph: siteConfig.openGraph,
+  authors: [
+    {
+      name: "SatishSolera",
+      url: "https://x.com/SatishSolera",
+    },
+  ],
+ 
 };
 
 export default async function RootLayout({

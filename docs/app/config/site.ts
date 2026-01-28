@@ -15,7 +15,7 @@ export const siteConfig = {
     description: "Make Your Android Screens Better.",
     images: [
       {
-        url: "/solui.png",
+        url: "https://solui-cyan.vercel.app/solui.png",
         width: 1200,
         height: 630,
         alt: "solUI",

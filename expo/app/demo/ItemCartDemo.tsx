@@ -27,7 +27,7 @@ const dummyData = {
 
 export default function ItemCartDemo() {
     return (
-        <View className='flex items-center justify-center min-h-screen'>
+        <View className=''>
             <ItemCart 
                 price={dummyData.price}
                 itemName={dummyData.itemName}
@@ -39,3 +39,4 @@ export default function ItemCartDemo() {
         </View>
     )
 }
+

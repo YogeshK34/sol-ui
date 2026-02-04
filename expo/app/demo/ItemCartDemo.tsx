@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import ItemCart from "../components/ui/item-cart";
+import ItemCart from "../../components/ui/item-cart";
 
 
 const ItemData = [
@@ -27,7 +27,7 @@ const dummyData = {
 
 export default function ItemCartDemo() {
     return (
-        <View className=''>
+        <View className='h-full w-full'>
             <ItemCart 
                 price={dummyData.price}
                 itemName={dummyData.itemName}

@@ -1,13 +1,14 @@
 import React from "react";
 import { View } from "react-native";
 
-import PinInput from "../components/ui/pin-input";
+import ScrollCard from "../components/ui/scroll-card";
 
 
-export default function PinInputDemo() {
+
+export default function ScrollCardDemo() {
     return (
         <View className='flex items-center justify-center min-h-screen'>
-            <PinInput length={4}  onComplete={()=> "pin entered successfully"}/>
+          <ScrollCard />
         </View>
     )
 }

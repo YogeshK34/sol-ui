@@ -63,6 +63,62 @@
         ]
     },
     {
+        "name": "badge-1",
+        "files": [
+            {
+                "path": "components/badge1.tsx",
+                "target": "components/ui"
+            },
+             {
+                "path": "components/button.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "badge-2",
+        "files": [
+            {
+                "path": "components/badge2.tsx",
+                "target": "components/ui"
+            },
+             {
+                "path": "components/button.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "badge-3",
+        "files": [
+            {
+                "path": "components/badge3.tsx",
+                "target": "components/ui"
+            }
+             
+        ]
+    },
+    {
+        "name": "badge-3",
+        "files": [
+            {
+                "path": "components/badge3.tsx",
+                "target": "components/ui"
+            }
+             
+        ]
+    },
+    {
+        "name": "badge-3",
+        "files": [
+            {
+                "path": "components/badge3.tsx",
+                "target": "components/ui"
+            }
+             
+        ]
+    },
+    {
         "name": "discrete-tab",
         "files": [
             {
